@@ -1,0 +1,6 @@
+# Forces Python 3.11 so pandas installs from a prebuilt wheel
+# (Python 3.13 has no pandas wheel yet and tries to compile from source, which fails).
+providers = ["python"]
+
+[phases.setup]
+nixPkgs = ["python311", "gcc"]
